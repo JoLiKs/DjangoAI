@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>AI</title>
 </head>
-<body>
-<h1>Hello</h1>
-<button>BTN</button>
+<body style="height: 95vh; display: flex; align-items: center; justify-content: center; flex-direction: column; background-color: cadetblue">
+<h1 style="color: rgb(50, 80, 40)">Задай вопрос ИИ</h1>
+<form method="post">
+<input style="padding: 1rem; border-radius: 13px; height: 70px; width: 500px" name="value">
+<button class="btn btn-success">Отправить</button></form>
+<br>
+{% if msg %}
+<div style="background-color: grey; border-radius: 20px; padding: 1rem; height: 400px; width: 80vw">
+    {{ msg }}
+</div>
+{% endif %}
 </body>
 </html>
